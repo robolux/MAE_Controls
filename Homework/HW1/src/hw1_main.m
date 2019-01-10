@@ -107,7 +107,7 @@ set(l_3,'Location','southwest')
 %% Problem 4
 % Plot data with linear, exponential, and power axis.
 
-su_bullets = repmat('*', 25, 1);
+su_bullets = repmat('*', 75, 1);
 un_bullets = repmat('-', 25, 1);
 fprintf('%c',su_bullets)
 fprintf('\nProblem 4\n')
