@@ -6,7 +6,7 @@ clear
 clc
 
 %% Header
-d_bullets = repmat('*', 50, 1);
+d_bullets = repmat('*', 50, 1); % concise way to make a lot of chars
 fprintf('%c',d_bullets)
 fprintf('\nMAE 488, Homework #1, Spring 2019, Hunter Phillips\n')
 fprintf('%c',d_bullets)
@@ -17,7 +17,7 @@ fprintf('\n\n')
 % (timestep of 0.001 seconds) in a single figure with each plot 
 % in a subplot (displacement at the top, acceleration at the bottom).
 
-su_bullets = repmat('*', 25, 1);
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
 un_bullets = repmat('-', 25, 1);
 fprintf('%c',su_bullets)
 fprintf('\nProblem 2 - Part h\n')
@@ -33,10 +33,10 @@ fprintf('y''''(t) = -720sin(12t+0.5)\n')
 
 fprintf('\nSolution Plotted in Figure 1\n\n\n')
 
-p2_t         = 0:0.001:2;
-displacement = 5*sin(12*p2_t+0.5);
-velocity     = 60*cos(12*p2_t+0.5);
-accel        = -720*sin(12*p2_t+0.5);
+p2_t         = 0:0.001:2;               % time vector
+displacement = 5*sin(12*p2_t+0.5);      % displacement given by problem
+velocity     = 60*cos(12*p2_t+0.5);     % calculated velocity equation
+accel        = -720*sin(12*p2_t+0.5);   % calculated acceleration equation
 
 figure(1);
 
@@ -57,7 +57,7 @@ ylabel('Acceleration y''''(t)')
 xlabel('Time (s)')
 
 %% Problem 3 - Part d
-% Plot f(x) = (x)cos(x) from 0 to 10 coupled with linear approx curves
+% Plot f(x) = (x)cos(x) from 0 to 10 coupled with linear approx curves.
 
 su_bullets = repmat('*', 25, 1);
 un_bullets = repmat('-', 25, 1);
@@ -75,14 +75,14 @@ fprintf('f(x) =  (5.0783)x - 23.9731\n')
 
 fprintf('\nSolution Plotted in Figure 2\n\n\n')
 
-p3_x = 0:0.001:10;
-p3_x1 = 2:0.001:4;
-p3_x2 = 4:0.001:6;
-fun = p3_x.*cos(p3_x);
-fun_b = (-1.4134)*p3_x1 + 1.2701;
-fun_c = (5.0783)*p3_x2 - 23.9731;
-point_b = (-1.4134)*3 + 1.2701;
-point_c = (5.0783)*5 - 23.9731;
+p3_x = 0:0.001:10;  % setting up time vectors
+p3_x1 = 2:0.001:4;  % for their respective
+p3_x2 = 4:0.001:6;  % curves
+fun = p3_x.*cos(p3_x);              % original function
+fun_b = (-1.4134)*p3_x1 + 1.2701;   % linear approx. at 3
+fun_c = (5.0783)*p3_x2 - 23.9731;   % linear approx. at 5
+point_b = (-1.4134)*3 + 1.2701;     % point of linear approx at 3
+point_c = (5.0783)*5 - 23.9731;     % point of linear approx at 5
 
 f2 = figure(2);
 title('MAE 488, Homework 1, Problem 3, Part d')
@@ -95,14 +95,14 @@ plot(3, point_b, 'r*')
 plot(5, point_c, 'g*')
 hold off
 
-ylabel('f(x)')
+ylabel('f(x)')  % latex legend
 l_3 = legend('$f(x) = xcos(x)$', '$f_{linear}(x) \approx [-\hat{x}sin(\hat{x})+cos(\hat{x})]x + \hat{x}^{2}sin(\hat{x})\,\,\,\,\,\, at \,\,\hat{x} = \hat{x}_{1} = 3$'...
              ,'$f_{linear}(x) \approx [-\hat{x}sin(\hat{x})+cos(\hat{x})]x + \hat{x}^{2}sin(\hat{x})\,\,\,\,\,\, at \,\,\hat{x} = \hat{x}_{2} = 5$'...
              ,'$f_{linear}(x) \,\,\,at\,\,\, [\hat{x}_{1}, f_{linear}(\hat{x}_{1})] \,\,\,with\,\,\, \hat{x}_{1} = 3$'...
              ,'$f_{linear}(x) \,\,\,at\,\,\, [\hat{x}_{2}, f_{linear}(\hat{x}_{2})] \,\,\,with\,\,\, \hat{x}_{2} = 5$');
 set(l_3, 'interpreter', 'latex')
-l_3.FontSize = 12;
-set(l_3,'Location','southwest')
+l_3.FontSize = 12;                  
+set(l_3,'Location','southwest') % reset this to fit nicely in figure
 
 %% Problem 4
 % Plot data with linear, exponential, and power axis.
