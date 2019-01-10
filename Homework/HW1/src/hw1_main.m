@@ -8,7 +8,7 @@ clc
 %% Header
 d_bullets = repmat('*', 50, 1);
 fprintf('%c',d_bullets)
-fprintf('\nMAE 488, Homework # 1, Spring 2019\n')
+fprintf('\nMAE 488, Homework #1, Spring 2019, Hunter Phillips\n')
 fprintf('%c',d_bullets)
 fprintf('\n\n')
 
@@ -16,6 +16,22 @@ fprintf('\n\n')
 % Plot the displacement, velocity, and acceleration for 2 seconds
 % (timestep of 0.001 seconds) in a single figure with each plot 
 % in a subplot (displacement at the top, acceleration at the bottom).
+
+su_bullets = repmat('*', 25, 1);
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 2 - Part h\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
+fprintf('%c',un_bullets)
+fprintf('\nEquations Plotted\n')
+fprintf('%c',un_bullets)
+fprintf('\ny(t)   = 5sin(12t+0.5)\n')
+fprintf('y''(t)  = 60cos(12t+0.5)\n')
+fprintf('y''''(t) = -720sin(12t+0.5)\n')
+
+fprintf('\nSolution Plotted in Figure 1\n\n\n')
 
 p2_t         = 0:0.001:2;
 displacement = 5*sin(12*p2_t+0.5);
@@ -41,18 +57,34 @@ ylabel('Acceleration y''''(t)')
 xlabel('Time (s)')
 
 %% Problem 3 - Part d
-% Plot f(x) = (x)cos(x) from 0 to 10 with linear approx curves
+% Plot f(x) = (x)cos(x) from 0 to 10 coupled with linear approx curves
+
+su_bullets = repmat('*', 25, 1);
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 3 - Part d\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
+fprintf('%c',un_bullets)
+fprintf('\nEquations Plotted\n')
+fprintf('%c',un_bullets)
+fprintf('\nf(x) = xcos(x)\n')
+fprintf('f(x) = (-1.4134)x + 1.2701\n')
+fprintf('f(x) =  (5.0783)x - 23.9731\n')
+
+fprintf('\nSolution Plotted in Figure 2\n\n\n')
 
 p3_x = 0:0.001:10;
 p3_x1 = 2:0.001:4;
 p3_x2 = 4:0.001:6;
 fun = p3_x.*cos(p3_x);
 fun_b = (-1.4134)*p3_x1 + 1.2701;
-fun_c = (5.0783)*p3_x2 -23.9731;
+fun_c = (5.0783)*p3_x2 - 23.9731;
 point_b = (-1.4134)*3 + 1.2701;
-point_c = (5.0783)*5 -23.9731;
+point_c = (5.0783)*5 - 23.9731;
 
-figure(2);
+f2 = figure(2);
 title('MAE 488, Homework 1, Problem 3, Part d')
 
 hold on
@@ -75,7 +107,22 @@ set(l_3,'Location','southwest')
 %% Problem 4
 % Plot data with linear, exponential, and power axis.
 
+su_bullets = repmat('*', 25, 1);
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 4\n')
+fprintf('Each set of data is plotted with linear, exponential, and power axis.\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
 % Part A
+
+fprintf('%c',un_bullets)
+fprintf('\nPart A - Figure 3\n')
+fprintf('%c',un_bullets)
+fprintf('\nx = [1 17.5 34 50.5 67 83.5 100]\n')
+fprintf('y = [0.001 93.79 1336.3 6503.8 20151.1 48612.3 100000]\n\n')
+
 figure(3);
 x_4_a = [1 17.5 34 50.5 67 83.5 100];
 y_4_a = [0.001 93.79 1336.3 6503.8 20151.1 48612.3 100000];
@@ -97,6 +144,13 @@ ylabel('y (power)')
 xlabel('x')
 
 % Part B
+
+fprintf('%c',un_bullets)
+fprintf('\nPart B - Figure 4\n')
+fprintf('%c',un_bullets)
+fprintf('\nx = [14.5 17 19.5 22 24.5 27 29.5]\n')
+fprintf('y = [0 62.5 125 187.5 250 312.5 375]\n\n')
+
 figure(4);
 x_4_b = [14.5 17 19.5 22 24.5 27 29.5];
 y_4_b = [0 62.5 125 187.5 250 312.5 375];
@@ -118,6 +172,13 @@ ylabel('y (power)')
 xlabel('x')
 
 % Part C
+
+fprintf('%c',un_bullets)
+fprintf('\nPart C - Figure 5\n')
+fprintf('%c',un_bullets)
+fprintf('\nx = [0.5 1 1.5 2 2.5 3 3.5]\n')
+fprintf('y = [3.115 2.426 1.889 1.471 1.146 0.893 0.695]\n\n')
+
 figure(5);
 x_4_c = [0.5 1 1.5 2 2.5 3 3.5];
 y_4_c = [3.115 2.426 1.889 1.471 1.146 0.893 0.695];
