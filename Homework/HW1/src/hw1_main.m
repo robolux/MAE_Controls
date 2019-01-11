@@ -38,7 +38,7 @@ displacement = 5*sin(12*p2_t+0.5);      % displacement given by problem
 velocity     = 60*cos(12*p2_t+0.5);     % calculated velocity equation
 accel        = -720*sin(12*p2_t+0.5);   % calculated acceleration equation
 
-figure(1);
+f1 = figure(1);
 
 subplot(3,1,1)
 plot(p2_t,displacement, 'r')
@@ -55,6 +55,9 @@ subplot(3,1,3)
 plot(p2_t,accel, '.b');
 ylabel('Acceleration y''''(t)')
 xlabel('Time (s)')
+
+% Uncomment to output figure as high quality png
+print(f1,'../figures/problem_2_h.png','-dpng','-r1200');
 
 %% Problem 3 - Part d
 % Plot f(x) = (x)cos(x) from 0 to 10 coupled with linear approx curves.
@@ -104,6 +107,9 @@ set(l_3, 'interpreter', 'latex')
 l_3.FontSize = 12;                  
 set(l_3,'Location','southwest') % reset this to fit nicely in figure
 
+% Uncomment to output figure as high quality png
+print(f2,'../figures/problem_3_d.png','-dpng','-r1200');
+
 %% Problem 4
 % Plot data with linear, exponential, and power axis.
 
@@ -123,7 +129,7 @@ fprintf('%c',un_bullets)
 fprintf('\nx = [1 17.5 34 50.5 67 83.5 100]\n')
 fprintf('y = [0.001 93.79 1336.3 6503.8 20151.1 48612.3 100000]\n\n')
 
-figure(3);
+f3 = figure(3);
 x_4_a = [1 17.5 34 50.5 67 83.5 100];
 y_4_a = [0.001 93.79 1336.3 6503.8 20151.1 48612.3 100000];
 
@@ -143,6 +149,9 @@ loglog(x_4_a,y_4_a, 'm')
 ylabel('y (power)')
 xlabel('x')
 
+% Uncomment to output figure as high quality png
+print(f3,'../figures/problem_4_a.png','-dpng','-r1200');
+
 % Part B
 
 fprintf('%c',un_bullets)
@@ -151,7 +160,7 @@ fprintf('%c',un_bullets)
 fprintf('\nx = [14.5 17 19.5 22 24.5 27 29.5]\n')
 fprintf('y = [0 62.5 125 187.5 250 312.5 375]\n\n')
 
-figure(4);
+f4 = figure(4);
 x_4_b = [14.5 17 19.5 22 24.5 27 29.5];
 y_4_b = [0 62.5 125 187.5 250 312.5 375];
 
@@ -171,6 +180,9 @@ loglog(x_4_b,y_4_b, 'm')
 ylabel('y (power)')
 xlabel('x')
 
+% Uncomment to output figure as high quality png
+print(f4,'../figures/problem_4_b.png','-dpng','-r1200');
+
 % Part C
 
 fprintf('%c',un_bullets)
@@ -179,7 +191,7 @@ fprintf('%c',un_bullets)
 fprintf('\nx = [0.5 1 1.5 2 2.5 3 3.5]\n')
 fprintf('y = [3.115 2.426 1.889 1.471 1.146 0.893 0.695]\n\n')
 
-figure(5);
+f5 = figure(5);
 x_4_c = [0.5 1 1.5 2 2.5 3 3.5];
 y_4_c = [3.115 2.426 1.889 1.471 1.146 0.893 0.695];
 
@@ -198,3 +210,6 @@ subplot(3,1,3)
 loglog(x_4_c,y_4_c, 'm')
 ylabel('y (power)')
 xlabel('x')
+
+% Uncomment to output figure as high quality png
+print(f5,'../figures/problem_4_c.png','-dpng','-r1200');
