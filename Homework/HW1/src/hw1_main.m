@@ -57,7 +57,7 @@ ylabel('Acceleration y''''(t)')
 xlabel('Time (s)')
 
 % Uncomment to output figure as high quality png
-print(f1,'../figures/problem_2_h.png','-dpng','-r1200');
+% print(f1,'../figures/problem_2_h.png','-dpng','-r1200');
 
 %% Problem 3 - Part d
 % Plot f(x) = (x)cos(x) from 0 to 10 coupled with linear approx curves.
@@ -108,7 +108,7 @@ l_3.FontSize = 12;
 set(l_3,'Location','southwest') % reset this to fit nicely in figure
 
 % Uncomment to output figure as high quality png
-print(f2,'../figures/problem_3_d.png','-dpng','-r1200');
+% print(f2,'../figures/problem_3_d.png','-dpng','-r1200');
 
 %% Problem 4
 % Plot data with linear, exponential, and power axis.
@@ -150,7 +150,7 @@ ylabel('y (power)')
 xlabel('x')
 
 % Uncomment to output figure as high quality png
-print(f3,'../figures/problem_4_a.png','-dpng','-r1200');
+% print(f3,'../figures/problem_4_a.png','-dpng','-r1200');
 
 % Part B
 
@@ -181,7 +181,7 @@ ylabel('y (power)')
 xlabel('x')
 
 % Uncomment to output figure as high quality png
-print(f4,'../figures/problem_4_b.png','-dpng','-r1200');
+% print(f4,'../figures/problem_4_b.png','-dpng','-r1200');
 
 % Part C
 
@@ -212,4 +212,4 @@ ylabel('y (power)')
 xlabel('x')
 
 % Uncomment to output figure as high quality png
-print(f5,'../figures/problem_4_c.png','-dpng','-r1200');
+% print(f5,'../figures/problem_4_c.png','-dpng','-r1200');
