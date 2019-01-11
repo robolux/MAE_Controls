@@ -98,6 +98,7 @@ plot(3, point_b, 'r*')
 plot(5, point_c, 'g*')
 hold off
 
+xlabel('x')
 ylabel('f(x)')  % latex legend
 l_3 = legend('$f(x) = xcos(x)$', '$f_{linear}(x) \approx [-\hat{x}sin(\hat{x})+cos(\hat{x})]x + \hat{x}^{2}sin(\hat{x})\,\,\,\,\,\, at \,\,\hat{x} = \hat{x}_{1} = 3$'...
              ,'$f_{linear}(x) \approx [-\hat{x}sin(\hat{x})+cos(\hat{x})]x + \hat{x}^{2}sin(\hat{x})\,\,\,\,\,\, at \,\,\hat{x} = \hat{x}_{2} = 5$'...
