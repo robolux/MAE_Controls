@@ -52,7 +52,7 @@ ylabel('Velocity y''(t)')
 xlabel('Time (s)')
 
 subplot(3,1,3)
-plot(p2_t,accel, '.b');
+plot(p2_t,accel, ':b');
 ylabel('Acceleration y''''(t)')
 xlabel('Time (s)')
 
