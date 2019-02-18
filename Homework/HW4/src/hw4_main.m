@@ -88,5 +88,5 @@ xlabel('Time','FontSize', 20)
 ylabel('Amplitude','FontSize', 20)
 set(gcf, 'Position',  [0, 0, 1500, 1300])
 
-% print(f3,'../results/problem_8_e.png','-dpng','-r1200');
+% print(f3,'../results/problem_8_e.png','-dpng','-r600');
 
