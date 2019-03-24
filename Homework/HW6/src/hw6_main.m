@@ -110,11 +110,11 @@ fprintf('\n\n')
 plot(t,v)
 xlabel('t (sec)')
 ylabel('v (ft/sec)')
-title({'MAE 488, Homework 6, Problem 6.35M'},'interpreter','latex')
+title({'MAE 488, Homework 6, Problem 5.35M'},'interpreter','latex')
 ylim([0 275])
 
 fprintf('Results Plotted in Figure 1\n')
-% print(f1,'..\results\problem_5_35M.png','-dpng','-r1200');
+print(f1,'..\results\problem_5_35M.png','-dpng','-r1200');
 
 %% Problem 41S
 
@@ -130,12 +130,12 @@ fprintf('\n\n')
 sim('problem_41s')
 
 plot(simout.time, simout.data,'r')
-title({'MAE 488, Homework 6, Problem 6.41S'},'interpreter','latex')
+title({'MAE 488, Homework 6, Problem 5.41S'},'interpreter','latex')
 xlabel('t')
 ylabel('y(t)')
 
 fprintf('Results Plotted in Figure 2\n')
-% print(f2,'..\results\problem_5_41S.png','-dpng','-r1200');
+print(f2,'..\results\problem_5_41S.png','-dpng','-r1200');
 
 %% Problem 45S
 
@@ -156,13 +156,13 @@ D_45s = [2;0]
 sim('problem_45s')
 
 plot(simout.time, simout.data)
-title({'MAE 488, Homework 6, Problem 6.45S'},'interpreter','latex')
+title({'MAE 488, Homework 6, Problem 5.45S'},'interpreter','latex')
 xlabel('t')
 legend('y_1(t)','y_2(t)','location','southeast','fontsize',16)
 ylim([-2 3])
 
 fprintf('\nResults Plotted in Figure 3\n')
-% print(f3,'..\results\problem_5_45S.png','-dpng','-r1200');
+print(f3,'..\results\problem_5_45S.png','-dpng','-r1200');
 
 
 %% Problem 46S
@@ -184,14 +184,14 @@ D_45s = [0;0]
 sim('problem_46s')
 
 plot(simout.time, simout.data)
-title({'MAE 488, Homework 6, Problem 6.46S'},'interpreter','latex')
+title({'MAE 488, Homework 6, Problem 5.46S'},'interpreter','latex')
 xlabel('t')
 legend('y_1(t)','y_2(t)','location','northeast','fontsize',16)
 ylim([-1 15])
 grid
 
 fprintf('\nResults Plotted in Figure 4\n')
-% print(f4,'..\results\problem_5_46S.png','-dpng','-r1200');
+print(f4,'..\results\problem_5_46S.png','-dpng','-r1200');
 
 %% Problem 28M
 
@@ -230,7 +230,7 @@ title({'MAE 488, Homework 6, Problem 5.28M'},'interpreter','latex')
 
 % part c
 fprintf('\nPart C\n-------\n\n')
-% print(f5,'..\results\problem_5_28M.png','-dpng','-r1200');
+print(f5,'..\results\problem_5_28M.png','-dpng','-r1200');
 
 % characteristic polynomial
 po = poly(A);

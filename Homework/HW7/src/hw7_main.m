@@ -1,7 +1,7 @@
 % Hunter Phillips
 % Homework 7
 % MAE 488
-% 03/10/19
+% 03/12/19
 
 clc
 clear
@@ -49,6 +49,8 @@ fprintf('\nUsing the given equation, the 100%% rise time of %.2f seconds which w
 
 %% Problem 52S
 
+f1 = figure(1);
+
 su_bullets = repmat('*', 25, 1); % setting up cmd line output
 fprintf('\n')
 fprintf('%c',su_bullets)
@@ -67,12 +69,18 @@ ylabel('Function')
 xlabel('Time')
 title({'MAE 488, Homework 7, Problem 8.52S'},'interpreter','latex','FontSize',16)
 
+fprintf('Results Plotted in Figure 1\n')
+% print(f1,'..\results\problem_8_52S.png','-dpng','-r1200');
+
+
 %% Problem 54S
+
+f2 = figure(2);
 
 su_bullets = repmat('*', 25, 1); % setting up cmd line output
 fprintf('\n')
 fprintf('%c',su_bullets)
-fprintf('\nProblem 54S\n')
+fprintf('\nProblem 54S k = 4\n')
 fprintf('%c',su_bullets)
 fprintf('\n\n')
 
@@ -87,17 +95,33 @@ ylabel('Function')
 xlabel('Time')
 title({'MAE 488, Homework 7, Problem 8.54S'},'interpreter','latex','FontSize',16)
 
+fprintf('Results Plotted in Figure 2\n')
+% print(f2,'..\results\problem_8_54S_1.png','-dpng','-r1200');
+
 % Experimenting with k
-figure
-n=5
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+fprintf('\n')
+fprintf('%c',su_bullets)
+fprintf('\nProblem 54S varying k\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
+f3 = figure(3);
+n=5;
 for k = 1:n
     subplot(n,1,k);
-    LTI_54M = tf(1,[5,3,7,k])
+    LTI_54M = tf(1,[5,3,7,k]);
     sim('Problem_54S.slx')
     plot(simout.time, simout.data)
-    hold on
+    if k == 1
+        title({'MAE 488, Homework 7, Problem 8.54S'},'interpreter','latex','FontSize',16)
+    end
+    kpr = sprintf('%d',k);
+    ylabel(strcat('k = ',kpr))
 end
-% legend('x(t)','location', 'northeast','FontSize',16,'interpreter','latex')
-% ylabel('Function')
-% xlabel('Time')
-% title({'MAE 488, Homework 7, Problem 8.54S'},'interpreter','latex','FontSize',16)
+xlabel('Time')
+
+fprintf('Results Plotted in Figure 3\n')
+% print(f3,'..\results\problem_8_54S_2.png','-dpng','-r1200');
+
