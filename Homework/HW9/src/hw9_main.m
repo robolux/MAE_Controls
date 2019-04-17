@@ -1,7 +1,7 @@
 % Hunter Phillips
 % Homework 9
 % MAE 488
-% 04/11/19
+% 04/17/19
 
 clc
 clear
@@ -17,9 +17,16 @@ fprintf('\n\n')
 clear
 
 %% Problem 11.2M
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 11.2M\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
 f1 = figure(1);
 hold on
-
 
 % Root Locus Plot
 num = [1 0];
@@ -30,9 +37,16 @@ rlocus(h)
 title({'MAE 488, Homework 9, Problem 11.2M'},'interpreter','latex','FontSize',16)
 
 
-% print(f1,'..\results\problem_10_29_1.png','-dpng','-r1200');
+print(f1,'..\results\problem_11_2.png','-dpng','-r1200');
 
 %% Problem 11.6M
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 11.6M\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
 
 % Multiply Gp_s and Gc_s as given to obtain:
 Gc_Gp_s = tf([1 12 30 100],[1 3 2 0])
@@ -52,6 +66,14 @@ zeros_c = zero(Ys_Rs)
 
 
 %% Problem 11.9M
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 11.9M\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
 f2 = figure(2);
 hold on
 
@@ -64,7 +86,18 @@ rlocus(t_fun)
 ylim([-3 3])
 title({'MAE 488, Homework 9, Problem 11.9M'},'interpreter','latex','FontSize',16)
 
+print(f2,'..\results\problem_11_9.png','-dpng','-r1200');
+
+
 %% Problem 11.45M
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 11.45M\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
 f3 = figure(3);
 hold on
 
@@ -76,5 +109,6 @@ tfunn = tf([1],[1 4 13])
 rlocus(tfunn)
 title({'MAE 488, Homework 9, Problem 11.45M'},'interpreter','latex','FontSize',16)
 
-
 largest_damp_ratio = cos(atan(3/2)) % info from pole on plot for 2 and 3
+
+print(f3,'..\results\problem_11_45.png','-dpng','-r1200');
