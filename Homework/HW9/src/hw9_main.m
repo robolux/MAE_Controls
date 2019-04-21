@@ -112,3 +112,67 @@ title({'MAE 488, Homework 9, Problem 11.45M'},'interpreter','latex','FontSize',1
 largest_damp_ratio = cos(atan(3/2)) % info from pole on plot for 2 and 3
 
 print(f3,'..\results\problem_11_45.png','-dpng','-r1200');
+
+%% Problem 11.59S
+
+su_bullets = repmat('*', 25, 1); % setting up cmd line output
+un_bullets = repmat('-', 25, 1);
+fprintf('%c',su_bullets)
+fprintf('\nProblem 11.59S\n')
+fprintf('%c',su_bullets)
+fprintf('\n\n')
+
+% Gp(s) = 1/(s+4)
+% Kp = 6    tau = 0.2
+% KI = 50   zeta = 0.707
+% (a) Construct a Simulink model to simulate this system with a unit-step command
+
+sim('hw9_11_59_a.slx')
+
+f4 = figure;
+plot(actuator_output.time,actuator_output.signals.values)
+title({'MAE 488, Homework 9, Problem 11.59S (a), Actuator Output vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+f5 = figure;
+plot(error.time,error.signals.values)
+title({'MAE 488, Homework 9, Problem 11.59S (a), Error vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+f6 = figure;
+plot(output_response.time,output_response.signals.values)
+title({'MAE 488, Homework 9, Problem 11.59S (a), Output Response vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+f7 = figure;
+plot(p_term.time,p_term.signals.values)
+title({'MAE 488, Homework 9, Problem 11.59S (a), P Term vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+f8 = figure;
+plot(i_term.time,i_term.signals.values)
+title({'MAE 488, Homework 9, Problem 11.59S (a), I Term vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+
+% (b) Construct a Simulink model of an anti-windup system for this application
+
+sim('hw9_11_59_b.slx')
+
+f9 = figure;
+plot(output_response_b.time,output_response_b.signals.values, 'r')
+title({'MAE 488, Homework 9, Problem 11.59S (b), Output Response vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+f10 = figure;
+plot(actuator_output.time,actuator_output.signals.values, 'r')
+title({'MAE 488, Homework 9, Problem 11.59S (b), Actuator Output vs Time'},'interpreter','latex','FontSize',16)
+grid
+
+% print(f4,'..\results\problem_11_59S_4.png','-dpng','-r1200');
+% print(f5,'..\results\problem_11_59S_5.png','-dpng','-r1200');
+% print(f6,'..\results\problem_11_59S_6.png','-dpng','-r1200');
+% print(f7,'..\results\problem_11_59S_7.png','-dpng','-r1200');
+% print(f8,'..\results\problem_11_59S_8.png','-dpng','-r1200');
+% print(f9,'..\results\problem_11_59S_9.png','-dpng','-r1200');
+% print(f10,'..\results\problem_11_59S_10.png','-dpng','-r1200');
